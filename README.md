@@ -1,6 +1,6 @@
-# Turborepo starter
+# Turbojoltconnect starter
 
-This is an official starter Turborepo.
+This is an official starter Turbojoltconnect.
 
 ## Using this example
 
@@ -12,21 +12,21 @@ npx create-turbo@latest
 
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+This Turbojoltconnect includes the following packages/apps:
 
 ### Apps and Packages
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@joltconnect/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@joltconnect/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@joltconnect/typescript-config`: `tsconfig.json`s used throughout the monojoltconnect
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 
-This Turborepo has some additional tools already setup for you:
+This Turbojoltconnect has some additional tools already setup for you:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
@@ -37,7 +37,7 @@ This Turborepo has some additional tools already setup for you:
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd my-turbojoltconnect
 pnpm build
 ```
 
@@ -46,24 +46,24 @@ pnpm build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd my-turbojoltconnect
 pnpm dev
 ```
 
 ### Remote Caching
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+Turbojoltconnect can use a technique known as [Remote Caching](https://turbo.build/joltconnect/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+By default, Turbojoltconnect will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
 ```
-cd my-turborepo
+cd my-turbojoltconnect
 npx turbo login
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+This will authenticate the Turbojoltconnect CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Next, you can link your Turbojoltconnect to your Remote Cache by running the following command from the root of your Turbojoltconnect:
 
 ```
 npx turbo link
@@ -71,11 +71,11 @@ npx turbo link
 
 ## Useful Links
 
-Learn more about the power of Turborepo:
+Learn more about the power of Turbojoltconnect:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [Tasks](https://turbo.build/joltconnect/docs/core-concepts/monojoltconnects/running-tasks)
+- [Caching](https://turbo.build/joltconnect/docs/core-concepts/caching)
+- [Remote Caching](https://turbo.build/joltconnect/docs/core-concepts/remote-caching)
+- [Filtering](https://turbo.build/joltconnect/docs/core-concepts/monojoltconnects/filtering)
+- [Configuration Options](https://turbo.build/joltconnect/docs/reference/configuration)
+- [CLI Usage](https://turbo.build/joltconnect/docs/reference/command-line-reference)
