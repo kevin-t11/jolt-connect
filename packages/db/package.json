@@ -1,0 +1,24 @@
+{
+  "name": "@joltconnect/db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test":"tsc -b && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "prisma": "^5.17.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.17.0"
+  },
+  "exports":{
+    ".": "./src/index.ts"
+  }
+}
