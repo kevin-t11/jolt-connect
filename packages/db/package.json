@@ -1,9 +1,12 @@
 {
   "name": "@joltconnect/db",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "test":"tsc -b && node dist/index.js"
+    "build": "tsc -b",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec \"yarn build && node dist/index.js\""
   },
   "keywords": [],
   "author": "",
@@ -13,12 +16,13 @@
     "@types/node": "^20.14.11",
     "prisma": "^5.17.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "nodemon": "^2.0.22"
   },
   "dependencies": {
     "@prisma/client": "^5.17.0"
   },
-  "exports":{
-    ".": "./src/index.ts"
+  "exports": {
+    ".": "./dist/index.js"
   }
 }
