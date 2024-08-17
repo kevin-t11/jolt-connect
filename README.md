@@ -14,7 +14,7 @@ This is Turborepo starter with shadcn/ui pre-configured.
 Clone the repository:
 
 ```sh
-git clone https://github.com/dan5py/jolt-connect.git
+git clone https://github.com/kevin-t11/jolt-connect.git
 ```
 
 Install dependencies:
