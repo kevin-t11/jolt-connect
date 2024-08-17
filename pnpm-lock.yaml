@@ -106,6 +106,18 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
+  apps/hooks:
+    dependencies:
+      '@jolt-connect/db':
+        specifier: workspace:*
+        version: link:../../packages/db
+      '@types/express':
+        specifier: ^4.17.21
+        version: 4.17.21
+      express:
+        specifier: ^4.19.2
+        version: 4.19.2
+
   packages/db:
     dependencies:
       '@prisma/client':
