@@ -3,7 +3,7 @@ import { authMiddleware } from "../middleware";
 import db from "@jolt-connect/db";
 import jwt from "jsonwebtoken";
 import { JWT_PASSWORD } from "../config";
-import { SigninSchema, SignupSchema } from "../types";
+import { SigninSchema, SignupSchema } from "@jolt-connect/shared";
 
 const router = Router();
 

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { authMiddleware } from "../middleware";
-import { ZapCreateSchema } from "../types";
+import { ZapCreateSchema } from "@jolt-connect/shared";
 import db from "@jolt-connect/db";
 
 const router = Router();

@@ -8,9 +8,9 @@ export const Input = ({label, placeholder, onChange, type = "text"}: {
     type?: "text" | "password"
 }) => {
     return <div>
-        <div className="text-sm pb-1 pt-2">
-            * <label>{label}</label>
+        <div className="text-sm font-medium pb-1 pt-2">
+            <label>{label}</label>
         </div>
-        <input className="border rounded px-4 py-2 w-full border-black" type={type} placeholder={placeholder} onChange={onChange} />
+        <input className="border rounded px-4 py-2 w-full border-slate-800" type={type} placeholder={placeholder} onChange={onChange} />
     </div>
 }
