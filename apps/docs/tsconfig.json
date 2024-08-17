@@ -18,6 +18,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "../../packages/ui/src/components/HeroVideo.tsx", "../../packages/ui/src/components/input.tsx", "../../packages/ui/src/components/Hero.tsx", "../../packages/ui/src/components/Feature.tsx", "../../packages/ui/src/components/CheckFeature.tsx"  ],
   "exclude": ["node_modules"]
 }

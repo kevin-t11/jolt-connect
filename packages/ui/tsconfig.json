@@ -6,6 +6,6 @@
       "@jolt-connect/ui/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "../../apps/docs/components/Hero.tsx"],
   "exclude": ["node_modules"]
 }

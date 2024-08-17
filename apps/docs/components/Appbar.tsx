@@ -1,22 +1,22 @@
 "use client";
 import { useRouter } from "next/navigation"
-import { Button } from "@jolt-connect/ui/components/ui/button";
 import { PrimaryButton } from "@jolt-connect/ui/buttons/PrimaryButton";
+import { LinkButton } from "@jolt-connect/ui/buttons/LinkButton";
 
 export const Appbar = () => {
     const router = useRouter();
     return <div className="flex border-b justify-between p-4">
         <div className="flex flex-col justify-center text-2xl font-extrabold">
-            Zapier
+            JoltConnect
         </div>
-        <div className="flex">
-            <div className="pr-4">
-                <Button onClick={() => {}}>Contact Sales</Button>
+        <div className="flex gap-x-4">
+            <div className="">
+                <LinkButton onClick={() => {}}>Contact Sales</LinkButton>
             </div>
-            <div className="pr-4">
-                <Button onClick={() => {
+            <div className="">
+                <LinkButton onClick={() => {
                     router.push("/login")
-                }}>Login</Button>
+                }}>Login</LinkButton>
             </div>
             <PrimaryButton onClick={() => {
                 router.push("/signup")
