@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { authMiddleware } from "../middleware";
+import { authMiddleware } from "../utils/middleware";
 import { ZapCreateSchema } from "@jolt-connect/shared";
 import db from "@jolt-connect/db";
 
@@ -23,7 +23,7 @@ router.post("/", authMiddleware, async (req, res) => {
                 userId: parseInt(id),
                 triggerId: "",
                 actions: {
-                    create: parsedData.data.actions.map((x, index) => ({
+                    create: parsedData.data.actions.map((x : any, index : number) => ({
                         actionId: x.availableActionId,
                         sortingOrder: index
                     }))

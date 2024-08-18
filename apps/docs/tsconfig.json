@@ -1,23 +1,27 @@
 {
-  "extends":"@jolt-connect/typescript-config/nextjs.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["./*"],
+    },
   },
-  "include": [
-    "next-env.d.ts",
-    "next.config.mjs",
-    "postcss.config.mjs",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-, "../../packages/ui/src/components/HeroVideo.tsx", "../../packages/ui/src/components/input.tsx", "../../packages/ui/src/components/Hero.tsx", "../../packages/ui/src/components/Feature.tsx", "../../packages/ui/src/components/CheckFeature.tsx"  ],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"],
 }

@@ -1,5 +1,5 @@
 import { Router, Request, Response } from "express";
-import { authMiddleware } from "../middleware";
+import { authMiddleware } from "../utils/middleware";
 import db from "@jolt-connect/db";
 import jwt from "jsonwebtoken";
 import { JWT_PASSWORD } from "../config";

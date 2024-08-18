@@ -5,7 +5,6 @@ import { PrimaryButton } from "@jolt-connect/ui/buttons/PrimaryButton";
 import { SecondaryButton } from "@jolt-connect/ui/buttons/SecondaryButton";
 import { Feature } from "@jolt-connect/ui/components/Feature"
 
-
 export const Hero = () => {
     const router = useRouter();
     return <div>
