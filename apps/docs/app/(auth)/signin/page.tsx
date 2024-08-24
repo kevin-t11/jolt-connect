@@ -2,15 +2,9 @@
 
 import { Appbar } from "@/components/Appbar";
 import React from 'react';
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
 import AuthForm from "@/components/AuthForm";
 
 export default function signIn() {
-    // const session = getServerSession();
-    // if (!session) {
-    //     redirect("/");
-    // }
     return (
         <div className="">
             <Appbar />
@@ -23,5 +17,5 @@ export default function signIn() {
         </div>
     )
 }
-    
+
 
