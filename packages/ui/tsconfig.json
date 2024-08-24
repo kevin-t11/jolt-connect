@@ -1,0 +1,11 @@
+{
+  "extends": "@jolt-connect/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@jolt-connect/ui/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "../../apps/docs/components/Hero.tsx"],
+  "exclude": ["node_modules"]
+}
