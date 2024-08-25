@@ -45,40 +45,6 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-// Signin route
-router.post("/login", async (req, res) => {
-  try {
-    const signinData = SigninSchema.parse(req.body);
-
-    // Check if user exists
-    const user = await db.user.findUnique({
-      where: { email: signinData.email },
-    });
-
-    if (!user) {
-      return res.status(400).json({ message: "Invalid email or password" });
-    }
-
-    // Verify password
-    const isPasswordValid = await bcrypt.compare(
-      signinData.password,
-      user.password,
-    );
-    if (!isPasswordValid) {
-      return res.status(400).json({ message: "Invalid email or password" });
-    }
-
-    // Generate JWT
-    const token = jwt.sign({ id: user.id }, JWT_PASSWORD);
-
-    return res
-      .status(200)
-      .json({ id: user.id, email: user.email, jwtToken: token });
-  } catch (error) {
-    return res.status(500).json({ message: "Internal server error" });
-  }
-});
-
 // Protected route example
 router.get("/profile", authMiddleware, async (req, res) => {
   try {

@@ -20,7 +20,7 @@ router.post("/", authMiddleware, async (req, res) => {
     const zapId = await db.$transaction(async (tx : any) => {
         const zap = await db.zap.create({
             data: {
-                userId: parseInt(id),
+                userId: id,
                 triggerId: "",
                 actions: {
                     create: parsedData.data.actions.map((x : any, index : number) => ({

@@ -10,15 +10,15 @@ export const authConfigs: NextAuthOptions = {
   adapter: PrismaAdapter(db),
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
+      clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ?? "",
+      clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET ?? "",
       allowDangerousEmailAccountLinking: true,
     }),
 
     GithubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID ?? "",
-      clientSecret: process.env.GITHUB_CLIENT_SECRET ?? "",
-      allowDangerousEmailAccountLinking : true,
+      clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID ?? "",
+      clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET ?? "",
+      allowDangerousEmailAccountLinking: true,
     }),
 
     CredentialsProvider({
@@ -59,9 +59,13 @@ export const authConfigs: NextAuthOptions = {
     updateAge: 24 * 60 * 60, // 24 hours
   },
   jwt: {
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: process.env.NEXT_PUBLIC_NEXTAUTH_SECRET,
   },
   callbacks: {
+    async signIn({ user, account, profile }) {
+      console.log("SignIn callback triggered", { user, account, profile });
+      return true;
+    },
     async redirect({ url, baseUrl }) {
       if (url.startsWith("/")) return `${baseUrl}${url}`;
       if (new URL(url).origin === baseUrl) return url;
@@ -80,4 +84,5 @@ export const authConfigs: NextAuthOptions = {
       return token;
     },
   },
+  debug: true,
 };
